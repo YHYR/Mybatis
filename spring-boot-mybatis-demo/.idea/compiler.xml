@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="extractdata" />
+        <module name="mybatis" />
+        <module name="spring-boot-dynamic-mybatis-demo" />
+        <module name="spring-boot-mybatis-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="extractdata" target="1.8" />
+      <module name="mybatis" target="1.8" />
+      <module name="mybatis (1)" target="1.8" />
+      <module name="spring-boot-dynamic-mybatis-demo" target="1.8" />
+      <module name="spring-boot-mybatis-annotation-mulidatasource" target="1.8" />
+      <module name="spring-boot-mybatis-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

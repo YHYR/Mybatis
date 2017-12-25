@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yhyr.mybatis.dynamic.mapper.DBInfoMapper" >
+    <resultMap id="DBBaseInfoMap" type="com.yhyr.mybatis.dynamic.domain.DBInfo" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="db_name" property="dbName" jdbcType="VARCHAR" />
+        <result column="db_ip" property="dbIp" jdbcType="VARCHAR" />
+        <result column="db_port" property="dbPort" jdbcType="INTEGER" />
+        <result column="db_user" property="dbUser" jdbcType="VARCHAR" />
+        <result column="db_passwd" property="dbPasswd" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, db_name, db_port, db_user, db_passwd, db_ip
+    </sql>
+
+    <select id="getDBInfoById" resultMap="DBBaseInfoMap" parameterType="java.lang.Integer">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM db_info
+        WHERE
+        id = #{primayrId}
+    </select>
+
+</mapper>

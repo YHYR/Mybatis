@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yhyr.mybatis.dynamic.mapper.StudentInfoMapper" >
+    <resultMap id="StudentBaseInfoMap" type="com.yhyr.mybatis.dynamic.domain.StudentInfo" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="student_name" property="studentName" jdbcType="VARCHAR" />
+        <result column="class_name" property="className" jdbcType="VARCHAR" />
+        <result column="grade_name" property="gradeName" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, student_name, class_name, grade_name
+    </sql>
+
+    <select id="getStudentInfo" resultMap="StudentBaseInfoMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM student_info
+    </select>
+
+</mapper>
