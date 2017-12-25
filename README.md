@@ -16,7 +16,7 @@
 
 ​	在项目启动前，一次性加载多个数据源，这样就可以保证在实际实现的过程中，根据不同的mapper映射找到对应的mybatis实例。
 
-具体实现原理详见[博客](blog.csdn.com/yhyr_ycy)
+具体实现原理详见[博客](http://blog.csdn.net/YHYR_YCY/article/details/78894940)
 
 ## mybatis 动态数据源加载 - spring-boot-dynamic-mybatis-demo 
 
@@ -26,5 +26,5 @@
 
 ​	现在有两个数据源：default和master；default数据源用于一种常规的业务逻辑；master数据源内只有slave数据库的相关信息(dbName, dbUrl, dbUser, dbPasswd)，而真正所需要获取的数据只能从slave中获取(这里假设slave的所有库中的表结构完全一致)。所以必须在项目初始化时加载到default和master这两个数据源，并根据业务需求，从master中获取对应的数据库信息，再通过动态加载的办法实现与之建立连接；*同时还要实现不同数据源之间的动态、灵活切换*。
 
-具体实现原理详见[博客](csdn.blog.com/yhyr_ycy)
+具体实现原理详见[博客](http://blog.csdn.net/YHYR_YCY/article/details/78894940)
 
