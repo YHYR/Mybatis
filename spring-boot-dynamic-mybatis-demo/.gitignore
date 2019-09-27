@@ -1,0 +1,11 @@
+target/
+qualityevaluation.iml
+logs/
+.idea/
+gitpull.sh
+locallogs
+/.settings/
+.classpath
+.project
+logschain/
+logsmetrics
